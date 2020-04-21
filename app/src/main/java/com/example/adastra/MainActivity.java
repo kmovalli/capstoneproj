@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Toast toast;
     Interpreter tflite;
     Button submit;
+    TextView outputNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,10 +65,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                float predicition = doInference(submit);
-                outputN
+                int prediction = doInference(submit);
+                outputNumber.setText(prediction);
             }
-        }
+        });
 
     }
 
