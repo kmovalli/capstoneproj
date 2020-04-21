@@ -23,7 +23,6 @@ import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 
 File file = new File("testmodel.tflite");
-
 public Interpreter(@NotNull File nasamodel);
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -40,12 +39,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         startTime = System.currentTimeMillis();
 
+        Interpreter tflite;
         try {
-            tflite = new Interpreter(loadModelFile());
+            tflite = new Interpreter(file);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
         final ImageButton button1 = findViewById(R.id.imageButton1);
         final ImageButton button2 = findViewById(R.id.imageButton2);
         final ImageButton button3 = findViewById(R.id.imageButton3);
