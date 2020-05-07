@@ -86,7 +86,7 @@
         android:layout_marginStart="96dp"
         android:layout_marginLeft="96dp"
         android:layout_marginTop="40dp"
-        android
+        android:textAlignment="center"
         android:text="Please Log In"
         android:textColor="#FFFFFF"
         android:textSize="32dp"
