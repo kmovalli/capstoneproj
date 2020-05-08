@@ -21,10 +21,12 @@ var nomVal = 0.0
 
 var showingAlert = false
 
+
 struct UserDetectView: View {
     
     var users = ["User 1", "User 2"]
     @State private var selectedUser = 0
+    @State private var action: Int? = 0
 
     
     var body: some View {
@@ -37,25 +39,25 @@ struct UserDetectView: View {
                                 Text(self.users[$0])
 
                             }
+                            .padding(.trailing, 50.0)
+                            
+                            
                         }.pickerStyle(WheelPickerStyle())
                         NavigationLink(destination: ContentView()){
-                            Text("Log In")
-                                .frame(minWidth: 100, maxWidth: 100, minHeight: 10, maxHeight: 20)
-                                .padding(15.0)
-                            .foregroundColor(.white)
-                            .background(Color.blue)
-                            .cornerRadius(20)
-                            .padding(.horizontal, 10)
-                            .padding(.vertical,10)
-                            .shadow(color: Color.blue, radius: 10)
+                            ButtonView()
                         }
-                        .padding(0.0)
-                        .frame(width: -100.0)
                         
                     }
                 }
             }.navigationBarTitle("Choose User")
         }
+    }
+}
+
+struct ButtonView: View {
+    var body: some View {
+        Text("Log In")
+            .frame(width: 200, height: 10, alignment: .center).padding(15.0).foregroundColor(.white).background(Color.blue).cornerRadius(20).shadow(color: Color.blue, radius: 10)
     }
 }
 
