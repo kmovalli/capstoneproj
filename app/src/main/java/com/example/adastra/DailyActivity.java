@@ -87,8 +87,7 @@ public class DailyActivity extends AppCompatActivity implements View.OnClickList
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View view){
-                /*int prediction = (int) doInference("0");
-                outputNumber.setText(Float.toString(prediction));*/
+                
                 SavedModelBundle model = SavedModelBundle.load("NASAModelTF");
                 try(Session s = model.session()){
                     s.runner();
