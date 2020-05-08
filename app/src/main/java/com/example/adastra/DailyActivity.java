@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
+import org.tensorflow.lite.Interpreter;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +22,7 @@ public class DailyActivity extends AppCompatActivity implements View.OnClickList
     long startTime;
     int timer = 0;
     Toast toast;
-    // Interpreter tflite;
+    Interpreter tflite;
     Button submit;
     TextView outputNumber;
 
