@@ -3,6 +3,7 @@ package com.example.adastra;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -11,9 +12,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 //import org.tensorflow.lite.Interpreter;
-import org.tensorflow.Tensor;
-import org.tensorflow.TensorFlow
+import org.tensorflow.*;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.BufferedReader;
@@ -83,11 +84,13 @@ public class DailyActivity extends AppCompatActivity implements View.OnClickList
         button6.setOnClickListener(this);
 
         submit.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View view){
                 /*int prediction = (int) doInference("0");
                 outputNumber.setText(Float.toString(prediction));*/
-
+                SavedModelBundle model = SavedModelBundle.load("NASAModelTF");
+                
 
             }
         });
