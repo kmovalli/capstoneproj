@@ -10,6 +10,7 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="prompt_username">Username</string>
+    <string name="login">Please Log-In</string>
     <string-array name="Users">
         <item>User 1</item>
         <item>User 2</item>
