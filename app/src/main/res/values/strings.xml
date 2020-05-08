@@ -11,7 +11,7 @@
     <string name="login_failed">"Login failed"</string>
     <string name="prompt_username">Username</string>
     <string name="login">Please Log-In</string>
-    <string name="please_select_user_and_login">Please select user and login</string>
+    <string name="please_select_user_and_login">Please select your user ID number.</string>
     <string-array name="Users">
         <item>User 1</item>
         <item>User 2</item>
