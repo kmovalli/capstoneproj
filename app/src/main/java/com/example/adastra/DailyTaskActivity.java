@@ -26,7 +26,7 @@ public class DailyTaskActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_daily_tasks);
         startTime = System.currentTimeMillis();
 
         /*Interpreter tflite;
