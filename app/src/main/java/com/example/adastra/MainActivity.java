@@ -1,7 +1,7 @@
 package com.example.adastra;
 
 import androidx.appcompat.app.AppCompatActivity;
-import org.tensorflow;
+//import org.tensorflow;
 
 import android.content.Context;
 import android.content.res.AssetFileDescriptor;
@@ -22,14 +22,14 @@ import java.io.OutputStreamWriter;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 
-File file = new File("testmodel.tflite");
-public Interpreter(@NotNull File nasamodel);
+//File file = new File("testmodel.tflite");
+//public Interpreter(@NotNull File nasamodel);
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     long startTime;
     int timer = 0;
     Toast toast;
-    Interpreter tflite;
+   // Interpreter tflite;
     Button submit;
     TextView outputNumber;
 
@@ -39,12 +39,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         startTime = System.currentTimeMillis();
 
-        Interpreter tflite;
+        /*Interpreter tflite;
         try {
             tflite = new Interpreter(file);
         } catch (Exception ex) {
             ex.printStackTrace();
-        }
+        }*/
         final ImageButton button1 = findViewById(R.id.imageButton1);
         final ImageButton button2 = findViewById(R.id.imageButton2);
         final ImageButton button3 = findViewById(R.id.imageButton3);
@@ -61,13 +61,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button5.setOnClickListener(this);
         button6.setOnClickListener(this);
 
-        submit.setOnClickListener(new View.OnClickListener() {
+        /*submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
                 int prediction = doInference(submit);
                 outputNumber.setText(prediction);
             }
-        });
+        }*///);
 
     }
 
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return line;
     }
 
-    public void doInference(int butt1, butt2, butt3, butt4, butt5, butt6){
+   /* public void doInference(int butt1, butt2, butt3, butt4, butt5, butt6){
         int p1;
         int p2;
         int p3;
@@ -190,7 +190,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         long declaredLength = fileDescriptor.getDeclaredLength();
         return fileChannel.map(FileChannel.MapMode.READ_ONLY, startOffset, declaredLength);
     }
-    interpreter.close();
+    interpreter.close();*/
 }
 
 
