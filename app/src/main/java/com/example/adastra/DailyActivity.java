@@ -1,7 +1,9 @@
 package com.example.adastra;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -58,6 +60,17 @@ public class DailyActivity extends AppCompatActivity implements View.OnClickList
                 outputNumber.setText(prediction);
             }
         }*///);
+
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // do something
+                Intent intent = new Intent(DailyActivity.this, MainActivity.class);
+                // If you just use this that is not a valid context. Use ActivityName.this
+                startActivity(intent);
+            }
+        }, 5000);
 
     }
 
