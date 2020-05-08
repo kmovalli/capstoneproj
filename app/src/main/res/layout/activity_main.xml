@@ -26,7 +26,7 @@
     <ImageButton
         android:id="@+id/imageButton1"
         android:layout_width="110dp"
-        android:layout_height="106dp"
+        android:layout_height="86dp"
         android:layout_marginStart="44dp"
         android:layout_marginLeft="44dp"
         android:layout_marginTop="32dp"
@@ -44,7 +44,7 @@
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="110dp"
-        android:layout_height="106dp"
+        android:layout_height="86dp"
         android:layout_marginTop="32dp"
         android:adjustViewBounds="true"
         android:background="@android:color/transparent"
@@ -59,7 +59,7 @@
     <ImageButton
         android:id="@+id/imageButton3"
         android:layout_width="110dp"
-        android:layout_height="106dp"
+        android:layout_height="86dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:adjustViewBounds="true"
@@ -77,7 +77,7 @@
     <ImageButton
         android:id="@+id/imageButton4"
         android:layout_width="110dp"
-        android:layout_height="106dp"
+        android:layout_height="86dp"
         android:adjustViewBounds="true"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
@@ -93,7 +93,7 @@
     <ImageButton
         android:id="@+id/imageButton5"
         android:layout_width="110dp"
-        android:layout_height="106dp"
+        android:layout_height="86dp"
         android:adjustViewBounds="true"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
@@ -109,7 +109,7 @@
     <ImageButton
         android:id="@+id/imageButton6"
         android:layout_width="110dp"
-        android:layout_height="106dp"
+        android:layout_height="86dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
         android:adjustViewBounds="true"
@@ -219,7 +219,7 @@
         android:id="@+id/textView7"
         android:layout_width="177dp"
         android:layout_height="39dp"
-        android:layout_marginTop="536dp"
+        android:layout_marginTop="488dp"
         android:text="Nominal or Off Nominal Output"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

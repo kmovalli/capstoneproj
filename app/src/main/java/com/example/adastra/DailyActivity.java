@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
-public class DailyTaskActivity extends AppCompatActivity implements View.OnClickListener {
+public class DailyActivity extends AppCompatActivity implements View.OnClickListener {
     long startTime;
     int timer = 0;
     Toast toast;

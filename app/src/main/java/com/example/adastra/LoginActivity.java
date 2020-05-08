@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     }
 
     public void openActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, DailyActivity.class);
         startActivity(intent);
     }
 
