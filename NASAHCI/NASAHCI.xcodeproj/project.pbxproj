@@ -7,29 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD6373C92465CD57007DA867 /* NASAModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CD6373C82465CD57007DA867 /* NASAModel.mlmodel */; };
-		CD865B4E244CFC41009AA0BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD865B4D244CFC41009AA0BD /* AppDelegate.swift */; };
-		CD865B50244CFC41009AA0BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD865B4F244CFC41009AA0BD /* SceneDelegate.swift */; };
-		CD865B52244CFC41009AA0BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD865B51244CFC41009AA0BD /* ContentView.swift */; };
-		CD865B54244CFC44009AA0BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD865B53244CFC44009AA0BD /* Assets.xcassets */; };
-		CD865B57244CFC44009AA0BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD865B56244CFC44009AA0BD /* Preview Assets.xcassets */; };
-		CD865B5A244CFC44009AA0BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD865B58244CFC44009AA0BD /* LaunchScreen.storyboard */; };
+		CD6373D82465E220007DA867 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6373D72465E220007DA867 /* AppDelegate.swift */; };
+		CD6373DA2465E220007DA867 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6373D92465E220007DA867 /* SceneDelegate.swift */; };
+		CD6373DC2465E220007DA867 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6373DB2465E220007DA867 /* ContentView.swift */; };
+		CD6373DE2465E228007DA867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6373DD2465E228007DA867 /* Assets.xcassets */; };
+		CD6373E12465E228007DA867 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6373E02465E228007DA867 /* Preview Assets.xcassets */; };
+		CD6373E42465E228007DA867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD6373E22465E228007DA867 /* LaunchScreen.storyboard */; };
+		CD6373EC2465E26C007DA867 /* NASAModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CD6373EB2465E26C007DA867 /* NASAModel.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CD6373C82465CD57007DA867 /* NASAModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = NASAModel.mlmodel; sourceTree = "<group>"; };
-		CD865B4A244CFC41009AA0BD /* NASAML.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASAML.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CD865B4D244CFC41009AA0BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD865B4F244CFC41009AA0BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CD865B51244CFC41009AA0BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CD865B53244CFC44009AA0BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CD865B56244CFC44009AA0BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		CD865B59244CFC44009AA0BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CD865B5B244CFC44009AA0BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD6373D42465E220007DA867 /* NASAHCI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NASAHCI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD6373D72465E220007DA867 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CD6373D92465E220007DA867 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CD6373DB2465E220007DA867 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CD6373DD2465E228007DA867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD6373E02465E228007DA867 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD6373E32465E228007DA867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CD6373E52465E228007DA867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD6373EB2465E26C007DA867 /* NASAModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = NASAModel.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CD865B47244CFC41009AA0BD /* Frameworks */ = {
+		CD6373D12465E220007DA867 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,41 +39,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CD865B41244CFC41009AA0BD = {
+		CD6373CB2465E220007DA867 = {
 			isa = PBXGroup;
 			children = (
-				CD865B4C244CFC41009AA0BD /* NASAML */,
-				CD865B4B244CFC41009AA0BD /* Products */,
+				CD6373D62465E220007DA867 /* NASAHCI */,
+				CD6373D52465E220007DA867 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CD865B4B244CFC41009AA0BD /* Products */ = {
+		CD6373D52465E220007DA867 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CD865B4A244CFC41009AA0BD /* NASAML.app */,
+				CD6373D42465E220007DA867 /* NASAHCI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CD865B4C244CFC41009AA0BD /* NASAML */ = {
+		CD6373D62465E220007DA867 /* NASAHCI */ = {
 			isa = PBXGroup;
 			children = (
-				CD865B4D244CFC41009AA0BD /* AppDelegate.swift */,
-				CD865B4F244CFC41009AA0BD /* SceneDelegate.swift */,
-				CD865B51244CFC41009AA0BD /* ContentView.swift */,
-				CD6373C82465CD57007DA867 /* NASAModel.mlmodel */,
-				CD865B53244CFC44009AA0BD /* Assets.xcassets */,
-				CD865B58244CFC44009AA0BD /* LaunchScreen.storyboard */,
-				CD865B5B244CFC44009AA0BD /* Info.plist */,
-				CD865B55244CFC44009AA0BD /* Preview Content */,
+				CD6373EB2465E26C007DA867 /* NASAModel.mlmodel */,
+				CD6373D72465E220007DA867 /* AppDelegate.swift */,
+				CD6373D92465E220007DA867 /* SceneDelegate.swift */,
+				CD6373DB2465E220007DA867 /* ContentView.swift */,
+				CD6373DD2465E228007DA867 /* Assets.xcassets */,
+				CD6373E22465E228007DA867 /* LaunchScreen.storyboard */,
+				CD6373E52465E228007DA867 /* Info.plist */,
+				CD6373DF2465E228007DA867 /* Preview Content */,
 			);
-			path = NASAML;
+			path = NASAHCI;
 			sourceTree = "<group>";
 		};
-		CD865B55244CFC44009AA0BD /* Preview Content */ = {
+		CD6373DF2465E228007DA867 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				CD865B56244CFC44009AA0BD /* Preview Assets.xcassets */,
+				CD6373E02465E228007DA867 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -81,39 +81,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CD865B49244CFC41009AA0BD /* NASAML */ = {
+		CD6373D32465E220007DA867 /* NASAHCI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CD865B5E244CFC44009AA0BD /* Build configuration list for PBXNativeTarget "NASAML" */;
+			buildConfigurationList = CD6373E82465E228007DA867 /* Build configuration list for PBXNativeTarget "NASAHCI" */;
 			buildPhases = (
-				CD865B46244CFC41009AA0BD /* Sources */,
-				CD865B47244CFC41009AA0BD /* Frameworks */,
-				CD865B48244CFC41009AA0BD /* Resources */,
+				CD6373D02465E220007DA867 /* Sources */,
+				CD6373D12465E220007DA867 /* Frameworks */,
+				CD6373D22465E220007DA867 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = NASAML;
-			productName = NASAML;
-			productReference = CD865B4A244CFC41009AA0BD /* NASAML.app */;
+			name = NASAHCI;
+			productName = NASAHCI;
+			productReference = CD6373D42465E220007DA867 /* NASAHCI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CD865B42244CFC41009AA0BD /* Project object */ = {
+		CD6373CC2465E220007DA867 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Sumedh Sohrab";
 				TargetAttributes = {
-					CD865B49244CFC41009AA0BD = {
-						CreatedOnToolsVersion = 11.3.1;
+					CD6373D32465E220007DA867 = {
+						CreatedOnToolsVersion = 11.4.1;
 					};
 				};
 			};
-			buildConfigurationList = CD865B45244CFC41009AA0BD /* Build configuration list for PBXProject "NASAML" */;
+			buildConfigurationList = CD6373CF2465E220007DA867 /* Build configuration list for PBXProject "NASAHCI" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,48 +121,48 @@
 				en,
 				Base,
 			);
-			mainGroup = CD865B41244CFC41009AA0BD;
-			productRefGroup = CD865B4B244CFC41009AA0BD /* Products */;
+			mainGroup = CD6373CB2465E220007DA867;
+			productRefGroup = CD6373D52465E220007DA867 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CD865B49244CFC41009AA0BD /* NASAML */,
+				CD6373D32465E220007DA867 /* NASAHCI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CD865B48244CFC41009AA0BD /* Resources */ = {
+		CD6373D22465E220007DA867 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD865B5A244CFC44009AA0BD /* LaunchScreen.storyboard in Resources */,
-				CD865B57244CFC44009AA0BD /* Preview Assets.xcassets in Resources */,
-				CD865B54244CFC44009AA0BD /* Assets.xcassets in Resources */,
+				CD6373E42465E228007DA867 /* LaunchScreen.storyboard in Resources */,
+				CD6373E12465E228007DA867 /* Preview Assets.xcassets in Resources */,
+				CD6373DE2465E228007DA867 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CD865B46244CFC41009AA0BD /* Sources */ = {
+		CD6373D02465E220007DA867 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD865B4E244CFC41009AA0BD /* AppDelegate.swift in Sources */,
-				CD865B50244CFC41009AA0BD /* SceneDelegate.swift in Sources */,
-				CD865B52244CFC41009AA0BD /* ContentView.swift in Sources */,
-				CD6373C92465CD57007DA867 /* NASAModel.mlmodel in Sources */,
+				CD6373D82465E220007DA867 /* AppDelegate.swift in Sources */,
+				CD6373EC2465E26C007DA867 /* NASAModel.mlmodel in Sources */,
+				CD6373DA2465E220007DA867 /* SceneDelegate.swift in Sources */,
+				CD6373DC2465E220007DA867 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CD865B58244CFC44009AA0BD /* LaunchScreen.storyboard */ = {
+		CD6373E22465E228007DA867 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CD865B59244CFC44009AA0BD /* Base */,
+				CD6373E32465E228007DA867 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CD865B5C244CFC44009AA0BD /* Debug */ = {
+		CD6373E62465E228007DA867 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -220,7 +220,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -230,7 +230,7 @@
 			};
 			name = Debug;
 		};
-		CD865B5D244CFC44009AA0BD /* Release */ = {
+		CD6373E72465E228007DA867 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -274,7 +274,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,40 +284,40 @@
 			};
 			name = Release;
 		};
-		CD865B5F244CFC44009AA0BD /* Debug */ = {
+		CD6373E92465E228007DA867 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"NASAML/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"NASAHCI/Preview Content\"";
 				DEVELOPMENT_TEAM = AZ6767KRW7;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = NASAML/Info.plist;
+				INFOPLIST_FILE = NASAHCI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sumedh.NASAML;
+				PRODUCT_BUNDLE_IDENTIFIER = AdAstra.NASAHCI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CD865B60244CFC44009AA0BD /* Release */ = {
+		CD6373EA2465E228007DA867 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"NASAML/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"NASAHCI/Preview Content\"";
 				DEVELOPMENT_TEAM = AZ6767KRW7;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = NASAML/Info.plist;
+				INFOPLIST_FILE = NASAHCI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = sumedh.NASAML;
+				PRODUCT_BUNDLE_IDENTIFIER = AdAstra.NASAHCI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -327,25 +327,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CD865B45244CFC41009AA0BD /* Build configuration list for PBXProject "NASAML" */ = {
+		CD6373CF2465E220007DA867 /* Build configuration list for PBXProject "NASAHCI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD865B5C244CFC44009AA0BD /* Debug */,
-				CD865B5D244CFC44009AA0BD /* Release */,
+				CD6373E62465E228007DA867 /* Debug */,
+				CD6373E72465E228007DA867 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CD865B5E244CFC44009AA0BD /* Build configuration list for PBXNativeTarget "NASAML" */ = {
+		CD6373E82465E228007DA867 /* Build configuration list for PBXNativeTarget "NASAHCI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CD865B5F244CFC44009AA0BD /* Debug */,
-				CD865B60244CFC44009AA0BD /* Release */,
+				CD6373E92465E228007DA867 /* Debug */,
+				CD6373EA2465E228007DA867 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CD865B42244CFC41009AA0BD /* Project object */;
+	rootObject = CD6373CC2465E220007DA867 /* Project object */;
 }
