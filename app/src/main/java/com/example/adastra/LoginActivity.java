@@ -29,11 +29,11 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
         spinner.setOnItemSelectedListener(this);
 
          login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                openActivity();
-            }
-        });
+             @Override
+             public void onClick(View v) {
+                 openActivity();
+             }
+         };
     }
 
     @Override
