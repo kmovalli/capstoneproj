@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
              public void onClick(View v) {
                  openActivity();
              }
-         };
+         });
     }
 
     @Override
@@ -48,7 +48,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
     }
 
     public void openActivity() {
-        Intent intent = new Intent(this, DailyTaskActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 

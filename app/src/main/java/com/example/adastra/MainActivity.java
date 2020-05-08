@@ -22,14 +22,10 @@ import java.io.OutputStreamWriter;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 
-//File file = new File("testmodel.tflite");
-//public Interpreter(@NotNull File nasamodel);
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     long startTime;
     int timer = 0;
     Toast toast;
-   // Interpreter tflite;
     Button submit;
     TextView outputNumber;
 
@@ -39,12 +35,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         startTime = System.currentTimeMillis();
 
-        /*Interpreter tflite;
-        try {
-            tflite = new Interpreter(file);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }*/
         final ImageButton button1 = findViewById(R.id.imageButton1);
         final ImageButton button2 = findViewById(R.id.imageButton2);
         final ImageButton button3 = findViewById(R.id.imageButton3);
@@ -61,13 +51,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button5.setOnClickListener(this);
         button6.setOnClickListener(this);
 
-        /*submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view){
-                int prediction = doInference(submit);
-                outputNumber.setText(prediction);
-            }
-        }*///);
 
     }
 
@@ -166,31 +149,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return line;
     }
 
-   /* public void doInference(int butt1, butt2, butt3, butt4, butt5, butt6){
-        int p1;
-        int p2;
-        int p3;
-        int p4;
-        int p5;
-        int p6;
-
-        p1 = int.valueOf(butt1);
-        p2 = int.valueOf(butt2);
-        p3 = int.valueOf(butt3);
-        p4 = int.valueOf(butt4);
-        p5 = int.valueOf(butt5);
-        p6 = int.valueOf(butt6);
-
-    }
-    private MappedByteBuffer loadModelFile() throws IOException {
-        AssetFileDescriptor fileDescriptor = this.getAssets().openFD("testmodel.tflite");
-        FileInputStream inputStream = new FileInputStream(fileDescriptor.getFileDescriptor());
-        FileChannel fileChannel = inputStream.getChannel();
-        long startOffset = fileDescriptor.getStartOffset();
-        long declaredLength = fileDescriptor.getDeclaredLength();
-        return fileChannel.map(FileChannel.MapMode.READ_ONLY, startOffset, declaredLength);
-    }
-    interpreter.close();*/
 }
 
 
