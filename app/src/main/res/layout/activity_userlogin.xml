@@ -12,43 +12,46 @@
     tools:context=".ui.login.LoginActivity"
     android:background="@drawable/backhgroundimg">
 
+
     <Button
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginStart="48dp"
-        android:layout_marginTop="59dp"
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="64dp"
         android:enabled="false"
         android:text="@string/action_sign_in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintVertical_bias="0.604" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="304dp"
         android:layout_height="79dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="96dp"
+        android:gravity="center_horizontal"
+        android:text="Please select user and login"
         android:textAlignment="center"
         android:textColor="@color/colorPrimary"
         android:textSize="25dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.295"
-        android:gravity="center_horizontal"
-        android:text="Please select user and login"/>
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="238dp"
         android:layout_height="139dp"
-        tools:layout_editor_absoluteX="71dp"
-        tools:layout_editor_absoluteY="145dp" />
+        android:layout_marginTop="92dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
