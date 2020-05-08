@@ -2,6 +2,7 @@ package com.example.adastra;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -9,22 +10,49 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-import org.tensorflow.lite.Interpreter;
+//import org.tensorflow.lite.Interpreter;
+import org.tensorflow.Tensor;
+import org.tensorflow.TensorFlow
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
 
 public class DailyActivity extends AppCompatActivity implements View.OnClickListener {
     long startTime;
     int timer = 0;
     Toast toast;
-    Interpreter tflite;
+    //Interpreter tflite;
     Button submit;
     TextView outputNumber;
+
+    /*private MappedByteBuffer loadModelFile() throws IOException {
+        AssetFileDescriptor fileDescriptor = this.getAssets().openFd("testmodel.tflite");
+        FileInputStream iStream = new FileInputStream(fileDescriptor.getFileDescriptor());
+        FileChannel fChannel = iStream.getChannel();
+        long s_offset = fileDescriptor.getStartOffset();
+        long declared_length = fileDescriptor.getDeclaredLength();
+        return fChannel.map(FileChannel.MapMode.READ_ONLY, s_offset, declared_length);
+    }
+
+    public float doInference(String inputString){
+        float[] inputVal = new float[1];
+        inputVal[0] = Float.valueOf(inputString);
+
+        float[][] outputVal = new float[1][1];
+
+        tflite.run(inputVal, outputVal);
+
+        float inferredValue = outputVal[0][0];
+
+        return inferredValue;
+    }*/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +60,12 @@ public class DailyActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_daily_tasks);
         startTime = System.currentTimeMillis();
 
-        /*Interpreter tflite;
-        try {
-            tflite = new Interpreter(file);
+        /*try {
+            tflite = new Interpreter(loadModelFile());
         } catch (Exception ex) {
             ex.printStackTrace();
-        }*/
+        }
+        tflite.runForMultipleInputsOutputs();*/
         final ImageButton button1 = findViewById(R.id.imageButton1);
         final ImageButton button2 = findViewById(R.id.imageButton2);
         final ImageButton button3 = findViewById(R.id.imageButton3);
@@ -54,13 +82,15 @@ public class DailyActivity extends AppCompatActivity implements View.OnClickList
         button5.setOnClickListener(this);
         button6.setOnClickListener(this);
 
-        /*submit.setOnClickListener(new View.OnClickListener() {
+        submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                int prediction = doInference(submit);
-                outputNumber.setText(prediction);
+                /*int prediction = (int) doInference("0");
+                outputNumber.setText(Float.toString(prediction));*/
+
+
             }
-        }*///);
+        });
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -73,6 +103,33 @@ public class DailyActivity extends AppCompatActivity implements View.OnClickList
             }
         }, 5000);
 
+    }
+
+
+
+    private void writeToFile(String data, Context context) {
+        try {
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("config.txt", Context.MODE_PRIVATE));
+            outputStreamWriter.write(data);
+            outputStreamWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private String readFile() {
+        String line = null;
+        try {
+            BufferedReader bReader = new BufferedReader(new InputStreamReader(openFileInput("config.txt")));
+            StringBuffer text = new StringBuffer();
+            while ((line = bReader.readLine()) != null) {
+                text.append(line);
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return line;
     }
 
     @Override
@@ -141,35 +198,9 @@ public class DailyActivity extends AppCompatActivity implements View.OnClickList
                 toast = Toast.makeText(this, ms, duration);
                 toast.show();
                 break;
-
         }
     }
-
-    private void writeToFile(String data, Context context) {
-        try {
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(context.openFileOutput("config.txt", Context.MODE_PRIVATE));
-            outputStreamWriter.write(data);
-            outputStreamWriter.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    private String readFile() {
-        String line = null;
-        try {
-            BufferedReader bReader = new BufferedReader(new InputStreamReader(openFileInput("config.txt")));
-            StringBuffer text = new StringBuffer();
-            while ((line = bReader.readLine()) != null) {
-                text.append(line);
-            }
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return line;
-    }
-
+}
    /* public void doInference(int butt1, butt2, butt3, butt4, butt5, butt6){
         int p1;
         int p2;
@@ -195,6 +226,5 @@ public class DailyActivity extends AppCompatActivity implements View.OnClickList
         return fileChannel.map(FileChannel.MapMode.READ_ONLY, startOffset, declaredLength);
     }
     interpreter.close();*/
-}
 
 
