@@ -31,7 +31,7 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
          login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                openMainActivity();
+                openActivity();
             }
         });
     }
@@ -47,8 +47,8 @@ public class LoginActivity extends AppCompatActivity implements AdapterView.OnIt
 
     }
 
-    public void openMainActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
+    public void openActivity() {
+        Intent intent = new Intent(this, DailyTaskActivity.class);
         startActivity(intent);
     }
 
