@@ -33,28 +33,6 @@ public class DailyActivity extends AppCompatActivity implements View.OnClickList
     Button submit;
     TextView outputNumber;
 
-    /*private MappedByteBuffer loadModelFile() throws IOException {
-        AssetFileDescriptor fileDescriptor = this.getAssets().openFd("testmodel.tflite");
-        FileInputStream iStream = new FileInputStream(fileDescriptor.getFileDescriptor());
-        FileChannel fChannel = iStream.getChannel();
-        long s_offset = fileDescriptor.getStartOffset();
-        long declared_length = fileDescriptor.getDeclaredLength();
-        return fChannel.map(FileChannel.MapMode.READ_ONLY, s_offset, declared_length);
-    }
-
-    public float doInference(String inputString){
-        float[] inputVal = new float[1];
-        inputVal[0] = Float.valueOf(inputString);
-
-        float[][] outputVal = new float[1][1];
-
-        tflite.run(inputVal, outputVal);
-
-        float inferredValue = outputVal[0][0];
-
-        return inferredValue;
-    }*/
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
