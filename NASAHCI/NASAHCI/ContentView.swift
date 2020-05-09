@@ -15,6 +15,12 @@ var p3val = 0
 var p4val = 0
 var p5val = 0
 var p6val = 0
+var e1val = 0
+var e2val = 0
+var e3val = 0
+var e4val = 0
+var e5val = 0
+var e6val = 0
 var userID = 0
 var timeInterval = 0.0
 var nomVal = 0.0
@@ -68,6 +74,10 @@ struct SubmitView: View {
 }
 
 struct EmergencyView: View {
+    @State private var alertMessage = ""
+    @State private var alertTitle = ""
+    @State private var showingAlert = false
+    
     var body: some View {
         NavigationView {
             Form {
@@ -75,22 +85,22 @@ struct EmergencyView: View {
                     Text("Emergency")
                     HStack(){
                         VStack() {
-                            Button("Power Off", action: {}).buttonStyle(GradientBackgroundStyle())
+                            Button("Power Off", action: self.onEButtonPress(num: 1)).buttonStyle(GradientBackgroundStyle())
                             
-                            Button("Vent 1", action: {}).buttonStyle(GradientBackgroundStyle())
+                            Button("Vent 1", action: self.onEButtonPress(num: 2)).buttonStyle(GradientBackgroundStyle())
 
                             
-                            Button("Vent 2", action: {}).buttonStyle(GradientBackgroundStyle())
+                            Button("Vent 2", action: self.onEButtonPress(num: 3)).buttonStyle(GradientBackgroundStyle())
 
                         }
                         VStack{
-                            Button("Vent 3", action: {}).buttonStyle(GradientBackgroundStyle())
+                            Button("Vent 3", action: self.onEButtonPress(num: 4)).buttonStyle(GradientBackgroundStyle())
 
                             
-                            Button("Vent 4", action: {}).buttonStyle(GradientBackgroundStyle())
+                            Button("Vent 4", action: self.onEButtonPress(num: 5)).buttonStyle(GradientBackgroundStyle())
 
                             
-                            Button("Deploy Fire Extinguisher", action: {}).buttonStyle(GradientBackgroundStyle())
+                            Button("Deploy Fire Extinguisher", action: self.onEButtonPress(num: 6)).buttonStyle(GradientBackgroundStyle())
                         
                         
                         }
@@ -99,15 +109,67 @@ struct EmergencyView: View {
                    /*Button("Submit", action: {}).buttonStyle(GradientBackgroundStyle()).padding(.vertical,20)
                    */
                    
-                    NavigationLink(destination: ContentView()) {
-                           SubmitView()
-                    }
+                    Button("Submit", action: submit).buttonStyle(GradientBackgroundStyle())
                    
                         
                     
                 }
-            }.navigationBarTitle("Emergency Handling")
+            }.navigationBarHidden(true)
         }
+    }
+    
+    func onEButtonPress(num: intmax_t) -> () -> (){
+        return {
+            if e1val == 0{
+                e1val = num
+            } else if e2val == 0 {
+                e2val = num
+            } else if e3val == 0 {
+                e3val = num
+            } else if e4val == 0 {
+                e4val = num
+            } else if e5val == 0 {
+                e5val = num
+            } else if e6val == 0 {
+                e6val = num
+            } else {
+                print(e1val + " " + e2val + " " + e3val + " " + e4val  + " " + e5val + " " + e6val + "\n")
+                self.submit()
+            }
+        }
+    }
+    func submit(){
+        var exit = 0
+        print(e1val + " " + e2val + " " + e3val + " " + e4val  + " " + e5val + " " + e6val + "\n")
+        do {
+            if e1val == 1{
+                if e2val == 2 || e2val == 3 {
+                    if e3val == 2 || e3val == 3 {
+                        if e4val == 4 || e4val == 5 {
+                            if e5val == 4 || e5val == 5 {
+                                if e6val == 6 {
+                                    exit = 1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            if Int(exit) == 1 {
+                alertMessage = "Nominal. Emergency Avoided"
+            } else {
+                alertMessage = "You are not nominal. System took over. Error: "
+                alertMessage.append(String(Int(exit)))
+            }
+            
+            alertTitle = "Emergency Report:"
+            // more code here
+        } catch {
+            alertTitle = "Error"
+            alertMessage = "Sorry, problem occured."
+        }
+        showingAlert = true
+        
     }
 }
 
@@ -150,7 +212,7 @@ struct ContentView: View {
                          Text(">")
                 }
                 
-        }
+            }.navigationBarBackButtonHidden(true).navigationBarHidden(true)
     }
         
         func onB1Press(){
