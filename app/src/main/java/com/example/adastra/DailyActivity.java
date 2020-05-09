@@ -105,7 +105,7 @@ public class DailyActivity extends AppCompatActivity implements View.OnClickList
                 // If you just use this that is not a valid context. Use ActivityName.this
                 startActivity(intent);
             }
-        }, 5000);
+        }, 12000);
 
     }
 
