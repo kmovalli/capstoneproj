@@ -72,39 +72,37 @@ struct EmergencyView: View {
         NavigationView {
             Form {
                 Section {
-                    VStack() {
-                        Text("NASA Model Test for Monitoring User Performance")
-                        Spacer()
-                        
-                        Button("Task One", action: {}).buttonStyle(GradientBackgroundStyle())
-                        
-                        Button("Task Two", action: {}).buttonStyle(GradientBackgroundStyle())
+                    Text("Emergency")
+                    HStack(){
+                        VStack() {
+                            Button("Task One", action: {}).buttonStyle(GradientBackgroundStyle())
+                            
+                            Button("Task Two", action: {}).buttonStyle(GradientBackgroundStyle())
 
-                        
-                        Button("Task Three", action: {}).buttonStyle(GradientBackgroundStyle())
+                            
+                            Button("Task Three", action: {}).buttonStyle(GradientBackgroundStyle())
 
-                        
-                        Button("Task Four", action: {}).buttonStyle(GradientBackgroundStyle())
+                        }
+                        VStack{
+                            Button("Task Four", action: {}).buttonStyle(GradientBackgroundStyle())
 
-                        
-                        Button("Task Five", action: {}).buttonStyle(GradientBackgroundStyle())
+                            
+                            Button("Task Five", action: {}).buttonStyle(GradientBackgroundStyle())
 
+                            
+                            Button("Task Six", action: {}).buttonStyle(GradientBackgroundStyle())
                         
-                        Button("Task Six", action: {}).buttonStyle(GradientBackgroundStyle())
-
-                        Spacer()
-                        Button("Submit", action: {}).buttonStyle(GradientBackgroundStyle()).padding(.vertical,20)
-
                         
-                       /* NavigationLink(destination: dest[Int.random(in: 1..<3)]) {
-                                SubmitView()
-                            }.simultaneousGesture(TapGesture().onEnded{
-                            monitorInput()
-                        })*/
-                        
-                    
-                    
+                        }
                     }
+                    Spacer()
+                   /*Button("Submit", action: {}).buttonStyle(GradientBackgroundStyle()).padding(.vertical,20)
+                   */
+                   
+                    NavigationLink(destination: ContentView()) {
+                           SubmitView()
+                    }
+                   
                         
                     
                 }
@@ -121,49 +119,38 @@ struct ContentView: View {
     
     
     var body: some View {
-        let start = DispatchTime.now()
+        //let start = DispatchTime.now()
         return Group {
-                VStack() {
-                    Text("NASA Model Test for Monitoring User Performance")
-                    Spacer()
-                    
-                    Button("Task One", action: onB1Press).buttonStyle(GradientBackgroundStyle())
-                    
-                    Button("Task Two", action: onB2Press).buttonStyle(GradientBackgroundStyle())
+                Text("NASA Model Test for Monitoring User Performance")
+                Spacer()
+                HStack(){
+                    VStack() {
+                        Button("Task One", action: onB1Press).buttonStyle(GradientBackgroundStyle())
+                        
+                        Button("Task Two", action: onB2Press).buttonStyle(GradientBackgroundStyle())
 
-                    
-                    Button("Task Three", action: onB3Press).buttonStyle(GradientBackgroundStyle())
+                        
+                        Button("Task Three", action: onB3Press).buttonStyle(GradientBackgroundStyle())
+                    }
+                    VStack() {
+                        Button("Task Four", action: onB4Press).buttonStyle(GradientBackgroundStyle())
 
-                    
-                    Button("Task Four", action: onB4Press).buttonStyle(GradientBackgroundStyle())
+                        
+                        Button("Task Five", action: onB5Press).buttonStyle(GradientBackgroundStyle())
 
-                    
-                    Button("Task Five", action: onB5Press).buttonStyle(GradientBackgroundStyle())
-
-                    
-                    Button("Task Six", action: onB6Press).buttonStyle(GradientBackgroundStyle())
-
-                    Spacer()
-                    Button("Submit", action: monitorInput).buttonStyle(GradientBackgroundStyle()).padding(.vertical,20)
-
-                    
-                   /* NavigationLink(destination: dest[Int.random(in: 1..<3)]) {
-                            SubmitView()
-                        }.simultaneousGesture(TapGesture().onEnded{
-                        monitorInput()
-                    })*/
-                    
+                        
+                        Button("Task Six", action: onB6Press).buttonStyle(GradientBackgroundStyle())
+                    }
+                }.alert(isPresented: $showingAlert) {
+                Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
                 }
-                .alert(isPresented: $showingAlert) {
-                    Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                Button("Submit", action: monitorInput).buttonStyle(GradientBackgroundStyle()).padding(.vertical,20)
+                Spacer()
+                NavigationLink(destination: EmergencyView()) {
+                         Text(">")
                 }
-                    
-
                 
-                
-                
-            }
-        
+        }
     }
         
         func onB1Press(){
