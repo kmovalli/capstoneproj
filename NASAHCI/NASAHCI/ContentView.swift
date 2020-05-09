@@ -75,22 +75,22 @@ struct EmergencyView: View {
                     Text("Emergency")
                     HStack(){
                         VStack() {
-                            Button("Task One", action: {}).buttonStyle(GradientBackgroundStyle())
+                            Button("Power Off", action: {}).buttonStyle(GradientBackgroundStyle())
                             
-                            Button("Task Two", action: {}).buttonStyle(GradientBackgroundStyle())
+                            Button("Vent 1", action: {}).buttonStyle(GradientBackgroundStyle())
 
                             
-                            Button("Task Three", action: {}).buttonStyle(GradientBackgroundStyle())
+                            Button("Vent 2", action: {}).buttonStyle(GradientBackgroundStyle())
 
                         }
                         VStack{
-                            Button("Task Four", action: {}).buttonStyle(GradientBackgroundStyle())
+                            Button("Vent 3", action: {}).buttonStyle(GradientBackgroundStyle())
 
                             
-                            Button("Task Five", action: {}).buttonStyle(GradientBackgroundStyle())
+                            Button("Vent 4", action: {}).buttonStyle(GradientBackgroundStyle())
 
                             
-                            Button("Task Six", action: {}).buttonStyle(GradientBackgroundStyle())
+                            Button("Deploy Fire Extinguisher", action: {}).buttonStyle(GradientBackgroundStyle())
                         
                         
                         }
