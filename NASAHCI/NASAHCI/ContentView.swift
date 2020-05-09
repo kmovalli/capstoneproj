@@ -57,13 +57,13 @@ struct UserDetectView: View {
 struct ButtonView: View {
     var body: some View {
         Text("Log In")
-            .frame(width: 150, height: 10, alignment: .center).padding(15.0).foregroundColor(.white).background(Color.blue).cornerRadius(20).shadow(color: Color.blue, radius: 10)
+            .frame(width: 300, height: 10, alignment: .center).padding(15.0).foregroundColor(.white).background(Color.blue).cornerRadius(20).shadow(color: Color.blue, radius: 10)
     }
 }
 struct SubmitView: View {
     var body: some View {
         Text("Submit")
-            .frame(width: 150, height: 10, alignment: .center).padding(15.0).foregroundColor(.white).background(Color.blue).cornerRadius(20).shadow(color: Color.blue, radius: 10)
+            .frame(width: 300, height: 10, alignment: .center).padding(15.0).foregroundColor(.white).background(Color.blue).cornerRadius(20).shadow(color: Color.blue, radius: 10)
     }
 }
 
