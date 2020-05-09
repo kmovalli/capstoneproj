@@ -15,24 +15,17 @@ var p3val = 0
 var p4val = 0
 var p5val = 0
 var p6val = 0
-var e1val = 0
-var e2val = 0
-var e3val = 0
-var e4val = 0
-var e5val = 0
-var e6val = 0
 var userID = 0
-var message = ""
-var count = 0
 var timeInterval = 0.0
 var nomVal = 0.0
-var showingError = false;
+var showingError = false
 var showingAlert = false
 
 struct UserDetectView: View {
     
     var users = ["User 1", "User 2"]
     @State private var selectedUser = 0
+    @State private var action: Int? = 0
 
     
     var body: some View {
@@ -75,270 +68,49 @@ struct SubmitView: View {
 }
 
 struct EmergencyView: View {
-    let start = DispatchTime.now()
     var body: some View {
-        VStack() {
-            Text("Emergency")
-            Text(message)
-            Spacer()
-            Button("Task One", action: onP1Press).buttonStyle(GradientBackgroundStyle())
-            
-            Button("Task Two", action: onP2Press).buttonStyle(GradientBackgroundStyle())
+        NavigationView {
+            Form {
+                Section {
+                    VStack() {
+                        Text("NASA Model Test for Monitoring User Performance")
+                        Spacer()
+                        
+                        Button("Task One", action: {}).buttonStyle(GradientBackgroundStyle())
+                        
+                        Button("Task Two", action: {}).buttonStyle(GradientBackgroundStyle())
 
-            
-            Button("Task Three", action: onP3Press).buttonStyle(GradientBackgroundStyle())
+                        
+                        Button("Task Three", action: {}).buttonStyle(GradientBackgroundStyle())
 
-            
-            Button("Task Four", action: onP4Press).buttonStyle(GradientBackgroundStyle())
+                        
+                        Button("Task Four", action: {}).buttonStyle(GradientBackgroundStyle())
 
-            
-            Button("Task Five", action: onP5Press).buttonStyle(GradientBackgroundStyle())
+                        
+                        Button("Task Five", action: {}).buttonStyle(GradientBackgroundStyle())
 
-            
-            Button("Task Six", action: onP6Press).buttonStyle(GradientBackgroundStyle())
+                        
+                        Button("Task Six", action: {}).buttonStyle(GradientBackgroundStyle())
 
-            Button("Submit", action: emerInput).buttonStyle(GradientBackgroundStyle())
-        
-        
+                        Spacer()
+                        Button("Submit", action: {}).buttonStyle(GradientBackgroundStyle()).padding(.vertical,20)
+
+                        
+                       /* NavigationLink(destination: dest[Int.random(in: 1..<3)]) {
+                                SubmitView()
+                            }.simultaneousGesture(TapGesture().onEnded{
+                            monitorInput()
+                        })*/
+                        
+                    
+                    
+                    }
+                        
+                    
+                }
+            }.navigationBarTitle("Emergency Handling")
         }
-                
-            
     }
-    /**** CODE FOR EMERGENCY HANDLING ****/
-        
-        func onP1Press(){
-            let stop = DispatchTime.now()
-            let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds
-            let time = Double(nanoTime)/1000
-            if time > 6000{
-                if count > 0{
-                    message = "System is taking over..."
-                    showingError = false
-                    count = 0
-                    //ContentView()
-                } else {
-                    message = "Try again"
-                    count += 1
-                }
-            } else {
-                if e1val == 0{
-                    e1val = 1
-                } else if e2val == 0 {
-                    e2val = 1
-                } else if e3val == 0 {
-                    e3val = 1
-                } else if e4val == 0 {
-                    e4val = 1
-                } else if e5val == 0 {
-                    e5val = 1
-                } else if e6val == 0 {
-                    e6val = 1
-                } else {
-                    emerInput()
-                }
-            }
-
-        }
-        func onP2Press(){
-            let stop = DispatchTime.now()
-            let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds
-            let time = Double(nanoTime)/1000
-            if time > 6000{
-                if count > 0{
-                    message = "System is taking over..."
-                    showingError = false
-                    count = 0
-                    //ContentView()
-                } else {
-                    message = "Try again"
-                    count += 1
-                }
-            } else {
-                if e1val == 0{
-                    e1val = 2
-                } else if e2val == 0 {
-                    e2val = 2
-                } else if e3val == 0 {
-                    e3val = 2
-                } else if e4val == 0 {
-                    e4val = 2
-                } else if e5val == 0 {
-                    e5val = 2
-                } else if e6val == 0 {
-                    e6val = 2
-                } else {
-                    emerInput()
-                }
-            }
-        }
-        func onP3Press(){
-            let stop = DispatchTime.now()
-            let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds
-            let time = Double(nanoTime)/1000
-            if time > 6000{
-                if count > 0{
-                    message = "System is taking over..."
-                    showingError = false
-                    count = 0
-                    //ContentView()
-                } else {
-                    message = "Try again"
-                    count += 1
-                }
-            } else {
-                if e1val == 0{
-                    e1val = 3
-                } else if e2val == 0 {
-                    e2val = 3
-                } else if e3val == 0 {
-                    e3val = 3
-                } else if e4val == 0 {
-                    e4val = 3
-                } else if e5val == 0 {
-                    e5val = 3
-                } else if e6val == 0 {
-                    e6val = 3
-                } else {
-                    emerInput()
-                }
-            }
-        }
-        func onP4Press(){
-            let stop = DispatchTime.now()
-            let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds
-            let time = Double(nanoTime)/1000
-            if time > 6000{
-                if count > 0{
-                    message = "System is taking over..."
-                    showingError = false
-                    count = 0
-                    //ContentView()
-                } else {
-                    message = "Try again"
-                    count += 1
-                }
-            } else {
-                if e1val == 0{
-                    e1val = 4
-                } else if e2val == 0 {
-                    e2val = 4
-                } else if e3val == 0 {
-                    e3val = 4
-                } else if e4val == 0 {
-                    e4val = 4
-                } else if e5val == 0 {
-                    e5val = 4
-                } else if e6val == 0 {
-                    e6val = 4
-                } else {
-                    emerInput()
-                }
-            }
-        }
-        func onP5Press(){
-           let stop = DispatchTime.now()
-           let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds
-           let time = Double(nanoTime)/1000
-           if time > 6000{
-               if count > 0{
-                   message = "System is taking over..."
-                   showingError = false
-                   count = 0
-                   //ContentView()
-               } else {
-                   message = "Try again"
-                   count += 1
-               }
-           } else {
-                if e1val == 0{
-                    e1val = 5
-                } else if e2val == 0 {
-                    e2val = 5
-                } else if e3val == 0 {
-                    e3val = 5
-                } else if e4val == 0 {
-                    e4val = 5
-                } else if e5val == 0 {
-                    e5val = 5
-                } else if e6val == 0 {
-                    e6val = 5
-                } else {
-                    emerInput()
-                }
-            }
-        }
-        func onP6Press(){
-            let stop = DispatchTime.now()
-            let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds
-            let time = Double(nanoTime)/1000
-            if time > 6000{
-                if count > 0{
-                    message = "System is taking over..."
-                    showingError = false
-                    count = 0
-                    //ContentView()
-                } else {
-                    message = "Try again"
-                    count += 1
-                }
-            } else {
-                
-                if e1val == 0{
-                    e1val = 6
-                } else if e2val == 0 {
-                    e2val = 6
-                } else if e3val == 0 {
-                    e3val = 6
-                } else if e4val == 0 {
-                    e4val = 6
-                } else if e5val == 0 {
-                    e5val = 6
-                } else if e6val == 0 {
-                    e6val = 6
-                } else {
-                    emerInput()
-                }
-            }
-            
-            
-            
-           // let stop = DispatchTime.now()
-           // let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds // <<<<< Difference in nano seconds (UInt64)
-           // let time = Double(nanoTime)/1000
-           // timeInterval += time
-        }
-    
-        func emerInput() {
-            let stop = DispatchTime.now()
-            let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds
-            let time = Double(nanoTime)/1000
-            timeInterval = time
-            //print(timeInterval)
-        
-            if timeInterval > 6000{
-                if count > 0{
-                    message = "System is taking over..."
-                    showingError = false
-                    count = 0
-                    //ContentView()
-                } else {
-                    message = "Try again"
-                    count += 1
-                }
-            }else{
-                showingError = false;
-            }
-            
-            e1val = 0
-            e2val = 0
-            e3val = 0
-            e4val = 0
-            e5val = 0
-            e6val = 0
-            timeInterval = 0.0
-            nomVal = 0.0
-            
-        }
 }
 
 struct ContentView: View {
@@ -347,10 +119,10 @@ struct ContentView: View {
     @State private var alertTitle = ""
     @State private var showingAlert = false
     
-    let start = DispatchTime.now()
+    
     var body: some View {
+        let start = DispatchTime.now()
         return Group {
-            if showingError == false{
                 VStack() {
                     Text("NASA Model Test for Monitoring User Performance")
                     Spacer()
@@ -390,15 +162,12 @@ struct ContentView: View {
                 
                 
                 
-            
-            } else {
-                EmergencyView()
             }
-        }
+        
     }
         
         func onB1Press(){
-            
+            let start = DispatchTime.now()
             if p1val == 0{
                 p1val = 1
             } else if p2val == 0 {
@@ -414,14 +183,14 @@ struct ContentView: View {
             } else {
                 monitorInput()
             }
-        /*    let stop = DispatchTime.now()
+            let stop = DispatchTime.now()
             let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds // <<<<< Difference in nano seconds (UInt64)
             let time = Double(nanoTime)/1000
             timeInterval += time
-                */
+                
         }
         func onB2Press(){
-            //let start = DispatchTime.now()
+            let start = DispatchTime.now()
             if p1val == 0{
                 p1val = 2
             } else if p2val == 0 {
@@ -437,13 +206,13 @@ struct ContentView: View {
             } else {
                 monitorInput()
             }
-        /*    let stop = DispatchTime.now()
+            let stop = DispatchTime.now()
             let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds // <<<<< Difference in nano seconds (UInt64)
             let time = Double(nanoTime)/1000
-            timeInterval += time*/
+            timeInterval += time
         }
         func onB3Press(){
-            //let start = DispatchTime.now()
+            let start = DispatchTime.now()
             if p1val == 0{
                 p1val = 3
             } else if p2val == 0 {
@@ -459,10 +228,10 @@ struct ContentView: View {
             } else {
                 monitorInput()
             }
-           // let stop = DispatchTime.now()
-          //  let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds // <<<<< Difference in nano seconds (UInt64)
-            //let time = Double(nanoTime)/1000
-            //timeInterval += time
+            let stop = DispatchTime.now()
+            let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds // <<<<< Difference in nano seconds (UInt64)
+            let time = Double(nanoTime)/1000
+            timeInterval += time
         }
         func onB4Press(){
             let start = DispatchTime.now()
@@ -481,10 +250,10 @@ struct ContentView: View {
             } else {
                 monitorInput()
             }
-          /*  let stop = DispatchTime.now()
+            let stop = DispatchTime.now()
             let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds // <<<<< Difference in nano seconds (UInt64)
             let time = Double(nanoTime)/1000
-            timeInterval += time */
+            timeInterval += time
         }
         func onB5Press(){
             let start = DispatchTime.now()
@@ -503,13 +272,13 @@ struct ContentView: View {
             } else {
                 monitorInput()
             }
-           /* let stop = DispatchTime.now()
+            let stop = DispatchTime.now()
             let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds // <<<<< Difference in nano seconds (UInt64)
             let time = Double(nanoTime)/1000
-            timeInterval += time*/
+            timeInterval += time
         }
         func onB6Press(){
-            //let start = DispatchTime.now()
+            let start = DispatchTime.now()
             if p1val == 0{
                 p1val = 6
             } else if p2val == 0 {
@@ -525,21 +294,18 @@ struct ContentView: View {
             } else {
                 monitorInput()
             }
-           // let stop = DispatchTime.now()
-           // let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds // <<<<< Difference in nano seconds (UInt64)
-           // let time = Double(nanoTime)/1000
-           // timeInterval += time
-        }
-        func monitorInput() {
             let stop = DispatchTime.now()
-            let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds
+            let nanoTime = stop.uptimeNanoseconds - start.uptimeNanoseconds // <<<<< Difference in nano seconds (UInt64)
             let time = Double(nanoTime)/1000
             timeInterval += time
+        }
+        func monitorInput() {
+            
             print(timeInterval)
             if timeInterval > 8000 && showingError == true{
                 EmergencyView()
             } else {
-                if showingError == false && timeInterval > 8000{
+                if showingError == false{
                     showingError = true;
                 }else{
                     showingError = false;
