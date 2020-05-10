@@ -14,6 +14,7 @@
 		CD6373E12465E228007DA867 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6373E02465E228007DA867 /* Preview Assets.xcassets */; };
 		CD6373E42465E228007DA867 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD6373E22465E228007DA867 /* LaunchScreen.storyboard */; };
 		CD6373EC2465E26C007DA867 /* NASAModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = CD6373EB2465E26C007DA867 /* NASAModel.mlmodel */; };
+		CD6C4B31246789AF000508CA /* EmergencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C4B30246789AF000508CA /* EmergencyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CD6373E32465E228007DA867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD6373E52465E228007DA867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD6373EB2465E26C007DA867 /* NASAModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = NASAModel.mlmodel; sourceTree = "<group>"; };
+		CD6C4B30246789AF000508CA /* EmergencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		CD6373D62465E220007DA867 /* NASAHCI */ = {
 			isa = PBXGroup;
 			children = (
+				CD6C4B30246789AF000508CA /* EmergencyView.swift */,
 				CD6373EB2465E26C007DA867 /* NASAModel.mlmodel */,
 				CD6373D72465E220007DA867 /* AppDelegate.swift */,
 				CD6373D92465E220007DA867 /* SceneDelegate.swift */,
@@ -152,6 +155,7 @@
 				CD6373D82465E220007DA867 /* AppDelegate.swift in Sources */,
 				CD6373EC2465E26C007DA867 /* NASAModel.mlmodel in Sources */,
 				CD6373DA2465E220007DA867 /* SceneDelegate.swift in Sources */,
+				CD6C4B31246789AF000508CA /* EmergencyView.swift in Sources */,
 				CD6373DC2465E220007DA867 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

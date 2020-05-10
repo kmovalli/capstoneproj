@@ -8,6 +8,8 @@
 
 import SwiftUI
 import CoreML
+import UIKit
+
 
 var p1val = 0
 var p2val = 0
@@ -15,12 +17,6 @@ var p3val = 0
 var p4val = 0
 var p5val = 0
 var p6val = 0
-var e1val = 0
-var e2val = 0
-var e3val = 0
-var e4val = 0
-var e5val = 0
-var e6val = 0
 var userID = 0
 var timeInterval = 0.0
 var nomVal = 0.0
@@ -28,7 +24,7 @@ var showingError = false
 var showingAlert = false
 
 struct UserDetectView: View {
-    
+    @EnvironmentObject var settings: UserSettings
     var users = ["User 1", "User 2"]
     @State private var selectedUser = 0
     @State private var action: Int? = 0
@@ -38,6 +34,7 @@ struct UserDetectView: View {
         NavigationView {
             Form {
                 Section {
+                    Text("Choose User")
                     VStack(alignment: .center){
                         Picker(selection: $selectedUser, label: Text("")) {
                             ForEach(0 ..< users.count) {
@@ -54,7 +51,7 @@ struct UserDetectView: View {
                         
                     }
                 }
-            }.navigationBarTitle("Choose User")
+                }.navigationBarHidden(true).navigationBarBackButtonHidden(true)
         }
     }
     
@@ -73,112 +70,14 @@ struct SubmitView: View {
     }
 }
 
-struct EmergencyView: View {
-    @State private var alertMessage = ""
-    @State private var alertTitle = ""
-    @State private var showingAlert = false
-    
-    var body: some View {
-        NavigationView {
-            Form {
-                Section {
-                    Text("Emergency")
-                    HStack(){
-                        VStack() {
-                            Button("Power Off", action: self.onEButtonPress(num: 1)).buttonStyle(GradientBackgroundStyle())
-                            
-                            Button("Vent 1", action: self.onEButtonPress(num: 2)).buttonStyle(GradientBackgroundStyle())
-
-                            
-                            Button("Vent 2", action: self.onEButtonPress(num: 3)).buttonStyle(GradientBackgroundStyle())
-
-                        }
-                        VStack{
-                            Button("Vent 3", action: self.onEButtonPress(num: 4)).buttonStyle(GradientBackgroundStyle())
-
-                            
-                            Button("Vent 4", action: self.onEButtonPress(num: 5)).buttonStyle(GradientBackgroundStyle())
-
-                            
-                            Button("Deploy Fire Extinguisher", action: self.onEButtonPress(num: 6)).buttonStyle(GradientBackgroundStyle())
-                        
-                        
-                        }
-                    }
-                    Spacer()
-                   /*Button("Submit", action: {}).buttonStyle(GradientBackgroundStyle()).padding(.vertical,20)
-                   */
-                   
-                    Button("Submit", action: submit).buttonStyle(GradientBackgroundStyle())
-                   
-                        
-                    
-                }
-            }.navigationBarHidden(true)
-        }
-    }
-    
-    func onEButtonPress(num: intmax_t) -> () -> (){
-        return {
-            if e1val == 0{
-                e1val = num
-            } else if e2val == 0 {
-                e2val = num
-            } else if e3val == 0 {
-                e3val = num
-            } else if e4val == 0 {
-                e4val = num
-            } else if e5val == 0 {
-                e5val = num
-            } else if e6val == 0 {
-                e6val = num
-            } else {
-                print(e1val + " " + e2val + " " + e3val + " " + e4val  + " " + e5val + " " + e6val + "\n")
-                self.submit()
-            }
-        }
-    }
-    func submit(){
-        var exit = 0
-        print(e1val + " " + e2val + " " + e3val + " " + e4val  + " " + e5val + " " + e6val + "\n")
-        do {
-            if e1val == 1{
-                if e2val == 2 || e2val == 3 {
-                    if e3val == 2 || e3val == 3 {
-                        if e4val == 4 || e4val == 5 {
-                            if e5val == 4 || e5val == 5 {
-                                if e6val == 6 {
-                                    exit = 1
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            if Int(exit) == 1 {
-                alertMessage = "Nominal. Emergency Avoided"
-            } else {
-                alertMessage = "You are not nominal. System took over. Error: "
-                alertMessage.append(String(Int(exit)))
-            }
-            
-            alertTitle = "Emergency Report:"
-            // more code here
-        } catch {
-            alertTitle = "Error"
-            alertMessage = "Sorry, problem occured."
-        }
-        showingAlert = true
-        
-    }
-}
 
 struct ContentView: View {
     
-    @State private var alertMessage = ""
-    @State private var alertTitle = ""
-    @State private var showingAlert = false
-    
+    @State var alertMessage = ""
+    @State var alertTitle = ""
+    @State var showingAlert = false
+    @State var showingWelcome = true
+    @EnvironmentObject var settings: UserSettings
     
     var body: some View {
         //let start = DispatchTime.now()
@@ -210,8 +109,20 @@ struct ContentView: View {
                 Spacer()
                 NavigationLink(destination: EmergencyView()) {
                          Text(">")
-                }
-                
+                }/*.alert(isPresented: $showingWelcome){
+            
+                    if malert == 1 {
+                        print(malert)
+                        malert = 0
+                        return Alert(title: Text("EMERGENCY"), message: Text("You are safe... Going back to main page"), dismissButton: .default(Text("Okay!")))
+                    } else if malert == 2 {
+                        print(malert )
+                        malert = 0
+                        return Alert(title: Text("EMERGENCY"), message: Text("You were off-nominal... System took over!"), dismissButton: .default(Text("Okay!")))
+                    } else {
+                        return Alert(title: Text("Welcome!"), message: Text("Please complete your tasks!"), dismissButton: .default(Text("Okay!")))
+                    }
+                }*/
             }.navigationBarBackButtonHidden(true).navigationBarHidden(true)
     }
         
@@ -352,7 +263,7 @@ struct ContentView: View {
             
             print(timeInterval)
             if timeInterval > 8000 && showingError == true{
-                EmergencyView()
+                print("Do Nothing")
             } else {
                 if showingError == false{
                     showingError = true;
