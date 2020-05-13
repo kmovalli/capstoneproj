@@ -48,7 +48,12 @@ def get_compiled_model():
 model = get_compiled_model()
 model.fit(train_dataset, epochs=15)
 
-model.evaluate(test_dataset)
+evaluation = model.evaluate(test_dataset)
+neweval = [[i] for i in evaluation]
+print("Loss: %s" % neweval['loss'])
+print("Accuracy: %f" % neweval['accuracy'])
+
+model.predict(test_dataset)
 
 model.summary()
 model.save('NASAModelTF')
